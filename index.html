@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO: Primary Meta Tags -->
+  <title id="page-title">NextGen DevHub — Developer Blog & Resources</title>
+  <meta name="description" id="page-desc" content="NextGen DevHub is a developer-focused blog and resource platform covering React, JavaScript, SEO, and modern web development." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" id="canonical" href="https://nextgendevhub.com/" />
+
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" id="og-title" content="NextGen DevHub — Developer Blog & Resources" />
+  <meta property="og:description" id="og-desc" content="Developer-focused blog covering React, JavaScript, SEO, and modern web development." />
+  <meta property="og:url" id="og-url" content="https://nextgendevhub.com/" />
+  <meta property="og:image" content="https://nextgendevhub.com/images/og-cover.png" />
+  <meta property="og:site_name" content="NextGen DevHub" />
+
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" id="tw-title" content="NextGen DevHub" />
+  <meta name="twitter:description" id="tw-desc" content="Developer blog covering React, JavaScript, SEO and more." />
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NextGen DevHub",
+    "url": "https://nextgendevhub.com",
+    "description": "A developer-focused blog and resource platform.",
+    "sameAs": ["https://twitter.com/nextgendevhub", "https://github.com/nextgendevhub"]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Syne:wght@400;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="logo" onclick="navigate('home')">
+        <div class="logo-dot"></div>
+        NextGen DevHub
+      </div>
+      <div class="nav-links">
+        <a onclick="navigate('home')" data-page="home">Home</a>
+        <a onclick="navigate('blogs')" data-page="blogs">Blog</a>
+        <a onclick="navigate('about')" data-page="about">About</a>
+        <a onclick="navigate('contact')" data-page="contact">Contact</a>
+      </div>
+      <div class="nav-cta" onclick="navigate('contact')">Get in Touch</div>
+      <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ============================
+         HOME PAGE
+    ============================= -->
+    <div id="page-home" class="page active" role="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-tag">Developer Blog & Resources</div>
+              <h1 class="hero-title" id="hero-heading">
+                Code smarter.<br>
+                Ship <span class="hl">faster.</span><br>
+                Rank <span class="hl2">higher.</span>
+              </h1>
+              <p class="hero-sub">
+                Deep dives into React, JavaScript, web performance, and SEO — written by developers, for developers who want to build things that matter.
+              </p>
+              <div class="hero-actions">
+                <button class="btn-primary" onclick="navigate('blogs')">
+                  Read the Blog →
+                </button>
+                <button class="btn-outline" onclick="navigate('about')">
+                  About the Project
+                </button>
+              </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+              <div class="hero-glow"></div>
+              <div class="code-card" role="img" aria-label="Code example showing SEO meta tags">
+                <div class="code-card-header">
+                  <div class="dot dot-r"></div>
+                  <div class="dot dot-y"></div>
+                  <div class="dot dot-g"></div>
+                  <span class="code-filename">index.html</span>
+                </div>
+                <div class="code-body">
+                  <div><span class="cm"><!-- SEO: Primary Meta Tags --></span></div>
+                  <div><span class="tag">&lt;title&gt;</span>NextGen DevHub<span class="tag">&lt;/title&gt;</span></div>
+                  <div><span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="str">"description"</span></div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">content</span>=<span class="str">"Developer blog..."</span> <span class="tag">/&gt;</span></div>
+                  <br>
+                  <div><span class="cm"><!-- Open Graph --></span></div>
+                  <div><span class="tag">&lt;meta</span> <span class="attr">property</span>=<span class="str">"og:title"</span></div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attr">content</span>=<span class="str">"NextGen DevHub"</span> <span class="tag">/&gt;</span></div>
+                  <br>
+                  <div><span class="cm"><!-- Structured Data --></span></div>
+                  <div><span class="tag">&lt;script</span> <span class="attr">type</span>=<span class="str">"application/ld+json"</span><span class="tag">&gt;</span></div>
+                  <div>&nbsp;&nbsp;<span class="kw">{</span> <span class="str">"@type"</span>: <span class="str">"WebSite"</span> <span class="kw">}</span></div>
+                  <div><span class="tag">&lt;/script&gt;</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- Stats -->
+        <div class="stats-row" role="region" aria-label="Site statistics">
+          <div class="stat-item">
+            <div class="stat-num">24+</div>
+            <div class="stat-label">Articles Published</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">8</div>
+            <div class="stat-label">Topics Covered</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Free & Open</div>
+          </div>
+        </div>
+
+        <!-- Featured Articles -->
+        <div class="section-label">Featured Articles</div>
+        <h2 class="section-title">Latest from the blog</h2>
+        <div class="blog-grid" role="list">
+          <article class="blog-card" onclick="navigate('blog-react-seo')" role="listitem" tabindex="0" aria-label="Read React SEO Guide article">
+            <div class="card-tag tag-react">React</div>
+            <h3 class="card-title">The Complete React SEO Guide for 2024</h3>
+            <p class="card-excerpt">Server-side rendering, dynamic meta tags, and everything you need to make your React app rank on Google.</p>
+            <div class="card-footer">
+              <span class="card-meta">8 min read · May 2025</span>
+              <span class="card-arrow">↗</span>
+            </div>
+          </article>
+          <article class="blog-card" onclick="navigate('blog-js-tips')" role="listitem" tabindex="0" aria-label="Read JavaScript Performance Tips article">
+            <div class="card-tag tag-js">JavaScript</div>
+            <h3 class="card-title">10 JavaScript Performance Tips You're Missing</h3>
+            <p class="card-excerpt">From debouncing to tree shaking — practical optimizations that will cut your bundle size in half.</p>
+            <div class="card-footer">
+              <span class="card-meta">6 min read · Apr 2025</span>
+              <span class="card-arrow">↗</span>
+            </div>
+          </article>
+          <article class="blog-card" onclick="navigate('blog-seo-basics')" role="listitem" tabindex="0" aria-label="Read Semantic HTML SEO article">
+            <div class="card-tag tag-seo">SEO</div>
+            <h3 class="card-title">Semantic HTML Is Your Best SEO Strategy</h3>
+            <p class="card-excerpt">Why using the right HTML elements is more powerful than any meta tag hack. The fundamentals that last forever.</p>
+            <div class="card-footer">
+              <span class="card-meta">5 min read · Mar 2025</span>
+              <span class="card-arrow">↗</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Topics -->
+        <div class="section-label">Browse by Topic</div>
+        <div class="topics-grid" role="list" aria-label="Browse topics">
+          <div class="topic-card" onclick="navigate('blogs')" role="listitem" tabindex="0">
+            <div class="topic-icon" aria-hidden="true">⚛️</div>
+            <div>
+              <div class="topic-name">React</div>
+              <div class="topic-count">7 articles</div>
+            </div>
+          </div>
+          <div class="topic-card" onclick="navigate('blogs')" role="listitem" tabindex="0">
+            <div class="topic-icon" aria-hidden="true">🟨</div>
+            <div>
+              <div class="topic-name">JavaScript</div>
+              <div class="topic-count">6 articles</div>
+            </div>
+          </div>
+          <div class="topic-card" onclick="navigate('blogs')" role="listitem" tabindex="0">
+            <div class="topic-icon" aria-hidden="true">🔍</div>
+            <div>
+              <div class="topic-name">SEO</div>
+              <div class="topic-count">5 articles</div>
+            </div>
+          </div>
+          <div class="topic-card" onclick="navigate('blogs')" role="listitem" tabindex="0">
+            <div class="topic-icon" aria-hidden="true">🎨</div>
+            <div>
+              <div class="topic-name">CSS</div>
+              <div class="topic-count">4 articles</div>
+            </div>
+          </div>
+          <div class="topic-card" onclick="navigate('blogs')" role="listitem" tabindex="0">
+            <div class="topic-icon" aria-hidden="true">⚡</div>
+            <div>
+              <div class="topic-name">Performance</div>
+              <div class="topic-count">3 articles</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================
+         BLOGS PAGE
+    ============================= -->
+    <div id="page-blogs" class="page" role="main" aria-labelledby="blogs-heading">
+      <div class="container">
+        <header class="page-header">
+          <h1 id="blogs-heading">The Blog</h1>
+          <p>Every article is a deep dive — no fluff, just practical knowledge you can use today.</p>
+        </header>
+
+        <div class="filter-row" role="group" aria-label="Filter articles by topic">
+          <button class="filter-btn active" onclick="filterBlogs('all', this)">All</button>
+          <button class="filter-btn" onclick="filterBlogs('react', this)">React</button>
+          <button class="filter-btn" onclick="filterBlogs('js', this)">JavaScript</button>
+          <button class="filter-btn" onclick="filterBlogs('seo', this)">SEO</button>
+          <button class="filter-btn" onclick="filterBlogs('css', this)">CSS</button>
+          <button class="filter-btn" onclick="filterBlogs('perf', this)">Performance</button>
+        </div>
+
+        <div class="blog-list" id="blog-list" role="list">
+          <article class="blog-row" data-cat="react" onclick="navigate('blog-react-seo')" role="listitem" tabindex="0">
+            <div class="blog-row-num">01</div>
+            <div class="blog-row-content">
+              <div class="blog-row-title">The Complete React SEO Guide for 2024</div>
+              <div class="blog-row-meta">8 min read · May 2025</div>
+            </div>
+            <div class="blog-row-tag"><span class="card-tag tag-react">React</span></div>
+            <div class="blog-row-arrow">→</div>
+          </article>
+          <article class="blog-row" data-cat="js" onclick="navigate('blog-js-tips')" role="listitem" tabindex="0">
+            <div class="blog-row-num">02</div>
+            <div class="blog-row-content">
+              <div class="blog-row-title">10 JavaScript Performance Tips You're Missing</div>
+              <div class="blog-row-meta">6 min read · Apr 2025</div>
+            </div>
+            <div class="blog-row-tag"><span class="card-tag tag-js">JavaScript</span></div>
+            <div class="blog-row-arrow">→</div>
+          </article>
+          <article class="blog-row" data-cat="seo" onclick="navigate('blog-seo-basics')" role="listitem" tabindex="0">
+            <div class="blog-row-num">03</div>
+            <div class="blog-row-content">
+              <div class="blog-row-title">Semantic HTML Is Your Best SEO Strategy</div>
+              <div class="blog-row-meta">5 min read · Mar 2025</div>
+            </div>
+            <div class="blog-row-tag"><span class="card-tag tag-seo">SEO</span></div>
+            <div class="blog-row-arrow">→</div>
+          </article>
+          <article class="blog-row" data-cat="css" onclick="navigate('blogs')" role="listitem" tabindex="0">
+            <div class="blog-row-num">04</div>
+            <div class="blog-row-content">
+              <div class="blog-row-title">CSS Grid vs Flexbox: When to Use Which</div>
+              <div class="blog-row-meta">7 min read · Feb 2025</div>
+            </div>
+            <div class="blog-row-tag"><span class="card-tag tag-css">CSS</span></div>
+            <div class="blog-row-arrow">→</div>
+          </article>
+          <article class="blog-row" data-cat="perf" onclick="navigate('blogs')" role="listitem" tabindex="0">
+            <div class="blog-row-num">05</div>
+            <div class="blog-row-content">
+              <div class="blog-row-title">Core Web Vitals: A Developer's Action Plan</div>
+              <div class="blog-row-meta">9 min read · Jan 2025</div>
+            </div>
+            <div class="blog-row-tag"><span class="card-tag tag-perf">Performance</span></div>
+            <div class="blog-row-arrow">→</div>
+          </article>
+          <article class="blog-row" data-cat="seo" onclick="navigate('blogs')" role="listitem" tabindex="0">
+            <div class="blog-row-num">06</div>
+            <div class="blog-row-content">
+              <div class="blog-row-title">Structured Data (JSON-LD) for Developers</div>
+              <div class="blog-row-meta">6 min read · Dec 2024</div>
+            </div>
+            <div class="blog-row-tag"><span class="card-tag tag-seo">SEO</span></div>
+            <div class="blog-row-arrow">→</div>
+          </article>
+          <article class="blog-row" data-cat="react" onclick="navigate('blogs')" role="listitem" tabindex="0">
+            <div class="blog-row-num">07</div>
+            <div class="blog-row-content">
+              <div class="blog-row-title">React Server Components: What You Need to Know</div>
+              <div class="blog-row-meta">10 min read · Nov 2024</div>
+            </div>
+            <div class="blog-row-tag"><span class="card-tag tag-react">React</span></div>
+            <div class="blog-row-arrow">→</div>
+          </article>
+          <article class="blog-row" data-cat="js" onclick="navigate('blogs')" role="listitem" tabindex="0">
+            <div class="blog-row-num">08</div>
+            <div class="blog-row-content">
+              <div class="blog-row-title">Async/Await Patterns Every Dev Should Know</div>
+              <div class="blog-row-meta">5 min read · Oct 2024</div>
+            </div>
+            <div class="blog-row-tag"><span class="card-tag tag-js">JavaScript</span></div>
+            <div class="blog-row-arrow">→</div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================
+         BLOG: REACT SEO GUIDE
+    ============================= -->
+    <div id="page-blog-react-seo" class="page" role="main">
+      <div class="blog-article">
+        <button class="article-back" onclick="navigate('blogs')" aria-label="Back to all blogs">
+          ← Back to Blog
+        </button>
+
+        <div class="article-tag-row">
+          <span class="card-tag tag-react">React</span>
+          <span class="card-tag tag-seo">SEO</span>
+        </div>
+
+        <h1 class="article-title">The Complete React SEO Guide for 2024</h1>
+
+        <div class="article-meta">
+          <span>📅 May 12, 2025</span>
+          <span>⏱ 8 min read</span>
+          <span>👤 NextGen DevHub</span>
+        </div>
+
+        <div class="article-body">
+          <p>React is powerful, but it has a historically complicated relationship with SEO. Client-side rendering means your content doesn't exist in the HTML until JavaScript runs — and that's a problem for crawlers.</p>
+
+          <p>In this guide, we'll cover everything you need to make your React app fully SEO-friendly in 2024.</p>
+
+          <h2>Why React and SEO Can Be Tricky</h2>
+          <p>When Googlebot crawls a page, it first looks at the raw HTML. A typical React app sends an almost-empty <code>&lt;div id="root"&gt;&lt;/div&gt;</code> — all your content is missing until JS executes. While Google can run JavaScript, it's delayed and unreliable.</p>
+
+          <div class="article-callout">The fix: render your HTML on the server before sending it to the browser. This is called Server-Side Rendering (SSR).</div>
+
+          <h2>Option 1 — Server-Side Rendering (SSR)</h2>
+          <p>With SSR, your React components render to HTML on the server for each request. The browser gets fully-populated HTML from the start.</p>
+
+          <div class="article-code" role="region" aria-label="Next.js SSR code example">
+            <span class="cm">// Next.js — getServerSideProps</span><br>
+            <span class="kw">export async function</span> <span class="fn">getServerSideProps</span>(context) {<br>
+            &nbsp;&nbsp;<span class="kw">const</span> data = <span class="kw">await</span> <span class="fn">fetchPost</span>(context.params.slug);<br>
+            &nbsp;&nbsp;<span class="kw">return</span> { props: { data } };<br>
+            }<br><br>
+            <span class="kw">export default function</span> <span class="fn">BlogPost</span>({ data }) {<br>
+            &nbsp;&nbsp;<span class="kw">return</span> (<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;article&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h1&gt;</span>{data.title}<span class="tag">&lt;/h1&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span>{data.body}<span class="tag">&lt;/p&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/article&gt;</span><br>
+            &nbsp;&nbsp;);<br>
+            }
+          </div>
+
+          <h2>Option 2 — Static Site Generation (SSG)</h2>
+          <p>If your content doesn't change per-request, SSG is faster and better for SEO. Pages are built at deploy time as plain HTML files.</p>
+
+          <h2>Dynamic Meta Tags</h2>
+          <p>Each page needs its own unique title and description. Use <strong>next/head</strong> or <strong>react-helmet</strong> to inject these dynamically:</p>
+
+          <div class="article-code" role="region" aria-label="Dynamic meta tags code example">
+            <span class="kw">import</span> Head <span class="kw">from</span> <span class="str">'next/head'</span>;<br><br>
+            <span class="kw">export default function</span> <span class="fn">BlogPost</span>({ post }) {<br>
+            &nbsp;&nbsp;<span class="kw">return</span> (<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;Head&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;title&gt;</span>{post.title} | NextGen DevHub<span class="tag">&lt;/title&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="str">"description"</span> <span class="attr">content</span>={post.excerpt} <span class="tag">/&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;meta</span> <span class="attr">property</span>=<span class="str">"og:title"</span> <span class="attr">content</span>={post.title} <span class="tag">/&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/Head&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;article&gt;</span>...content...<span class="tag">&lt;/article&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/&gt;</span><br>
+            &nbsp;&nbsp;);<br>
+            }
+          </div>
+
+          <h2>SEO Checklist for React</h2>
+          <ul>
+            <li>Use Next.js or Remix for SSR/SSG</li>
+            <li>Every page has a unique <code>&lt;title&gt;</code> and <code>&lt;meta name="description"&gt;</code></li>
+            <li>Add canonical tags to avoid duplicate content</li>
+            <li>Use semantic HTML: <code>&lt;article&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;header&gt;</code></li>
+            <li>Add structured data (JSON-LD) for rich results</li>
+            <li>Generate and submit a sitemap.xml</li>
+            <li>Ensure images have descriptive alt text</li>
+            <li>Optimize Core Web Vitals (LCP, CLS, FID)</li>
+          </ul>
+        </div>
+
+        <nav class="article-nav" aria-label="Article navigation">
+          <div class="article-nav-btn" onclick="navigate('blog-seo-basics')">
+            <div class="nav-dir">← Previous</div>
+            <div class="nav-title">Semantic HTML Is Your Best SEO Strategy</div>
+          </div>
+          <div class="article-nav-btn" onclick="navigate('blog-js-tips')" style="text-align:right">
+            <div class="nav-dir">Next →</div>
+            <div class="nav-title">10 JavaScript Performance Tips</div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ============================
+         BLOG: JS TIPS
+    ============================= -->
+    <div id="page-blog-js-tips" class="page" role="main">
+      <div class="blog-article">
+        <button class="article-back" onclick="navigate('blogs')" aria-label="Back to all blogs">
+          ← Back to Blog
+        </button>
+        <div class="article-tag-row">
+          <span class="card-tag tag-js">JavaScript</span>
+          <span class="card-tag tag-perf">Performance</span>
+        </div>
+        <h1 class="article-title">10 JavaScript Performance Tips You're Missing</h1>
+        <div class="article-meta">
+          <span>📅 Apr 28, 2025</span>
+          <span>⏱ 6 min read</span>
+          <span>👤 NextGen DevHub</span>
+        </div>
+        <div class="article-body">
+          <p>Modern JavaScript is fast — but how you write it makes all the difference. Here are 10 techniques that will measurably improve your app's performance.</p>
+
+          <h2>1. Debounce Expensive Event Handlers</h2>
+          <p>Never run heavy calculations on every keystroke or scroll event. Debouncing delays execution until the user stops.</p>
+
+          <div class="article-code" role="region" aria-label="Debounce function code">
+            <span class="kw">function</span> <span class="fn">debounce</span>(fn, delay) {<br>
+            &nbsp;&nbsp;<span class="kw">let</span> timer;<br>
+            &nbsp;&nbsp;<span class="kw">return</span> (...args) =&gt; {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">clearTimeout</span>(timer);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;timer = <span class="fn">setTimeout</span>(() =&gt; <span class="fn">fn</span>(...args), delay);<br>
+            &nbsp;&nbsp;};<br>
+            }<br><br>
+            <span class="kw">const</span> handleSearch = <span class="fn">debounce</span>((query) =&gt; {<br>
+            &nbsp;&nbsp;<span class="fn">fetchResults</span>(query);<br>
+            }, <span class="str">300</span>);
+          </div>
+
+          <h2>2. Use Tree Shaking</h2>
+          <p>Import only what you need. Instead of importing the entire library, import specific functions. Your bundler will eliminate unused code.</p>
+
+          <div class="article-code" role="region" aria-label="Tree shaking example">
+            <span class="cm">// ❌ Bad — imports entire lodash (~70kb)</span><br>
+            <span class="kw">import</span> _ <span class="kw">from</span> <span class="str">'lodash'</span>;<br><br>
+            <span class="cm">// ✅ Good — imports only what's needed</span><br>
+            <span class="kw">import</span> { debounce } <span class="kw">from</span> <span class="str">'lodash-es'</span>;
+          </div>
+
+          <h2>3. Lazy Load Routes and Components</h2>
+          <p>Don't load code for pages the user hasn't visited yet. React's <code>lazy()</code> and <code>Suspense</code> make this simple.</p>
+
+          <h2>4. Memoize Pure Functions</h2>
+          <p>If a function always returns the same output for the same input, cache the result. Use <code>useMemo</code> in React or a simple Map cache.</p>
+
+          <h2>5. Avoid Unnecessary Re-renders</h2>
+          <p>In React, wrap stable components with <code>React.memo()</code> and use <code>useCallback</code> for function props passed to child components.</p>
+
+          <h2>The Performance Checklist</h2>
+          <ul>
+            <li>Debounce scroll, resize, and input handlers</li>
+            <li>Use dynamic imports for heavy modules</li>
+            <li>Enable gzip/brotli compression on your server</li>
+            <li>Minimize DOM manipulations — batch them</li>
+            <li>Use <code>requestAnimationFrame</code> for animations</li>
+            <li>Profile with Chrome DevTools before optimizing</li>
+            <li>Set proper cache headers for static assets</li>
+          </ul>
+
+          <div class="article-callout">Always measure before you optimize. Chrome's Performance panel and Lighthouse are your best friends.</div>
+        </div>
+        <nav class="article-nav" aria-label="Article navigation">
+          <div class="article-nav-btn" onclick="navigate('blog-react-seo')">
+            <div class="nav-dir">← Previous</div>
+            <div class="nav-title">The Complete React SEO Guide</div>
+          </div>
+          <div class="article-nav-btn" onclick="navigate('blog-seo-basics')" style="text-align:right">
+            <div class="nav-dir">Next →</div>
+            <div class="nav-title">Semantic HTML Is Your Best SEO Strategy</div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ============================
+         BLOG: SEO BASICS
+    ============================= -->
+    <div id="page-blog-seo-basics" class="page" role="main">
+      <div class="blog-article">
+        <button class="article-back" onclick="navigate('blogs')" aria-label="Back to all blogs">
+          ← Back to Blog
+        </button>
+        <div class="article-tag-row">
+          <span class="card-tag tag-seo">SEO</span>
+        </div>
+        <h1 class="article-title">Semantic HTML Is Your Best SEO Strategy</h1>
+        <div class="article-meta">
+          <span>📅 Mar 15, 2025</span>
+          <span>⏱ 5 min read</span>
+          <span>👤 NextGen DevHub</span>
+        </div>
+        <div class="article-body">
+          <p>Before you worry about meta tags, keyword density, or backlinks — get your HTML right. Semantic HTML is the foundation of every SEO strategy that actually lasts.</p>
+
+          <h2>What Is Semantic HTML?</h2>
+          <p>Semantic HTML uses elements that have meaning beyond just their appearance. A <code>&lt;div&gt;</code> is meaningless. A <code>&lt;article&gt;</code> tells browsers, screen readers, and search engines: "this is a self-contained piece of content."</p>
+
+          <h2>The Key Elements</h2>
+
+          <div class="article-code" role="region" aria-label="Semantic HTML structure example">
+            <span class="tag">&lt;header&gt;</span><br>
+            &nbsp;&nbsp;<span class="tag">&lt;nav&gt;</span>...navigation...<span class="tag">&lt;/nav&gt;</span><br>
+            <span class="tag">&lt;/header&gt;</span><br><br>
+            <span class="tag">&lt;main&gt;</span><br>
+            &nbsp;&nbsp;<span class="tag">&lt;article&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h1&gt;</span>Your main heading<span class="tag">&lt;/h1&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span>Content...<span class="tag">&lt;/p&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;section&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h2&gt;</span>A subsection<span class="tag">&lt;/h2&gt;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/section&gt;</span><br>
+            &nbsp;&nbsp;<span class="tag">&lt;/article&gt;</span><br>
+            <span class="tag">&lt;/main&gt;</span><br><br>
+            <span class="tag">&lt;footer&gt;</span>...footer...<span class="tag">&lt;/footer&gt;</span>
+          </div>
+
+          <h2>The H1 → H2 → H3 Hierarchy</h2>
+          <p>There should be <strong>exactly one H1</strong> per page — your primary topic. Then H2s for major sections, H3s for subsections. This hierarchy is how search engines understand your content structure.</p>
+
+          <div class="article-callout">Think of headings like a book: H1 is the title, H2s are chapters, H3s are section headings within chapters.</div>
+
+          <h2>Image Alt Text</h2>
+          <p>Every image needs an <code>alt</code> attribute. Be descriptive — not "image1.jpg" but "A developer writing JavaScript code on a MacBook." This helps both SEO and accessibility.</p>
+
+          <h2>Why This Beats Meta Tag Hacks</h2>
+          <p>Meta tags are important, but semantic structure signals to Google what your content is actually about. It's harder to game and more durable than any keyword trick.</p>
+
+          <ul>
+            <li>Use <code>&lt;main&gt;</code> to wrap your primary content</li>
+            <li>Use <code>&lt;article&gt;</code> for blog posts and standalone content</li>
+            <li>Use <code>&lt;section&gt;</code> to group related content</li>
+            <li>Use <code>&lt;aside&gt;</code> for sidebars and supplementary info</li>
+            <li>Use <code>&lt;time datetime="..."&gt;</code> for dates</li>
+            <li>Use <code>&lt;address&gt;</code> for contact info</li>
+          </ul>
+        </div>
+        <nav class="article-nav" aria-label="Article navigation">
+          <div class="article-nav-btn" onclick="navigate('blog-js-tips')">
+            <div class="nav-dir">← Previous</div>
+            <div class="nav-title">10 JavaScript Performance Tips</div>
+          </div>
+          <div class="article-nav-btn" onclick="navigate('blog-react-seo')" style="text-align:right">
+            <div class="nav-dir">Next →</div>
+            <div class="nav-title">The Complete React SEO Guide</div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ============================
+         ABOUT PAGE
+    ============================= -->
+    <div id="page-about" class="page" role="main">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual" aria-hidden="true">
+            <div class="about-avatar">👨‍💻</div>
+            <div class="about-badges">
+              <span class="badge">React</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">Node.js</span>
+              <span class="badge">SEO</span>
+              <span class="badge">CSS</span>
+              <span class="badge">Performance</span>
+              <span class="badge">Accessibility</span>
+              <span class="badge">Open Source</span>
+            </div>
+          </div>
+          <div class="about-content">
+            <h1>Building in public.<br>Learning out loud.</h1>
+            <p>NextGen DevHub is a developer learning project — an SEO-first blog platform built from scratch using HTML, CSS, and JavaScript, then progressively enhanced with modern tooling.</p>
+            <p>Every article is written while learning the concept from the inside. That means the writing is practical, grounded, and honest about what's hard.</p>
+            <p>The goal: build real understanding of how the web works, from semantic HTML to structured data to server-side rendering.</p>
+
+            <div class="skills-grid" role="list" aria-label="Technical skills">
+              <div class="skill-item" role="listitem">
+                <div class="skill-icon" aria-hidden="true">⚛️</div>
+                <div>
+                  <div class="skill-name">React</div>
+                  <div class="skill-level">Advanced</div>
+                </div>
+              </div>
+              <div class="skill-item" role="listitem">
+                <div class="skill-icon" aria-hidden="true">🟨</div>
+                <div>
+                  <div class="skill-name">JavaScript</div>
+                  <div class="skill-level">Advanced</div>
+                </div>
+              </div>
+              <div class="skill-item" role="listitem">
+                <div class="skill-icon" aria-hidden="true">🔍</div>
+                <div>
+                  <div class="skill-name">SEO</div>
+                  <div class="skill-level">Intermediate</div>
+                </div>
+              </div>
+              <div class="skill-item" role="listitem">
+                <div class="skill-icon" aria-hidden="true">🎨</div>
+                <div>
+                  <div class="skill-name">CSS</div>
+                  <div class="skill-level">Advanced</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline" role="region" aria-label="Project timeline">
+          <div class="timeline-title">Project Roadmap</div>
+          <div class="timeline-items">
+            <div class="timeline-item">
+              <div class="tl-year">Phase 1</div>
+              <div class="tl-content">
+                <h4>Vanilla Frontend + Basic SEO</h4>
+                <p>Semantic HTML, meta tags, heading structure, image SEO, clean URLs, mobile responsiveness — the fundamentals.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="tl-year">Phase 2</div>
+              <div class="tl-content">
+                <h4>Advanced SEO in Vanilla</h4>
+                <p>Structured data, dynamic blog rendering, search, pagination, lazy loading, performance optimization.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="tl-year">Phase 3</div>
+              <div class="tl-content">
+                <h4>React Migration</h4>
+                <p>Rewrite in React + Next.js. Apply SSR, SSG, dynamic meta tags, and React-specific SEO strategies.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="tl-year">Phase 4</div>
+              <div class="tl-content">
+                <h4>Full Stack + CMS</h4>
+                <p>Add a backend, CMS integration, user auth, comments, and analytics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================
+         CONTACT PAGE
+    ============================= -->
+    <div id="page-contact" class="page" role="main">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h1>Let's talk.<br>We don't bite.</h1>
+            <p>Have a topic suggestion, found a bug, or just want to say hi? All messages are read and replied to.</p>
+
+            <div class="contact-links" role="list" aria-label="Contact methods">
+              <a class="contact-link" href="mailto:hello@nextgendevhub.com" role="listitem" aria-label="Send email to NextGen DevHub">
+                <div class="contact-link-icon" aria-hidden="true">✉️</div>
+                <div>
+                  <div class="contact-link-label">Email</div>
+                  <div class="contact-link-val">hello@nextgendevhub.com</div>
+                </div>
+              </a>
+              <a class="contact-link" href="https://twitter.com/nextgendevhub" role="listitem" aria-label="NextGen DevHub on Twitter">
+                <div class="contact-link-icon" aria-hidden="true">🐦</div>
+                <div>
+                  <div class="contact-link-label">Twitter / X</div>
+                  <div class="contact-link-val">@nextgendevhub</div>
+                </div>
+              </a>
+              <a class="contact-link" href="https://github.com/nextgendevhub" role="listitem" aria-label="NextGen DevHub on GitHub">
+                <div class="contact-link-icon" aria-hidden="true">🐙</div>
+                <div>
+                  <div class="contact-link-label">GitHub</div>
+                  <div class="contact-link-val">github.com/nextgendevhub</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap" role="region" aria-labelledby="contact-form-title">
+            <h2 class="form-title" id="contact-form-title">Send a message</h2>
+            <div id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contact-name">Name</label>
+                  <input class="form-input" id="contact-name" type="text" placeholder="Your name" autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-email">Email</label>
+                  <input class="form-input" id="contact-email" type="email" placeholder="your@email.com" autocomplete="email" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-topic">Topic</label>
+                <select class="form-select" id="contact-topic">
+                  <option value="">Select a topic...</option>
+                  <option>Article suggestion</option>
+                  <option>Bug report</option>
+                  <option>Collaboration</option>
+                  <option>General feedback</option>
+                  <option>Just saying hi</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Message</label>
+                <textarea class="form-textarea" id="contact-message" placeholder="What's on your mind?"></textarea>
+              </div>
+              <button class="form-submit" onclick="submitForm()" aria-label="Send message">
+                Send Message →
+              </button>
+            </div>
+            <div class="form-success" id="form-success" role="alert" aria-live="polite">
+              <div class="success-icon" aria-hidden="true">🎉</div>
+              <h3>Message sent!</h3>
+              <p>Thanks for reaching out. We'll get back to you within 24 hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="footer-logo-dot" aria-hidden="true"></div>
+        NextGen DevHub
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a onclick="navigate('home')">Home</a>
+        <a onclick="navigate('blogs')">Blog</a>
+        <a onclick="navigate('about')">About</a>
+        <a onclick="navigate('contact')">Contact</a>
+      </nav>
+      <div class="footer-copy">© 2025 NextGen DevHub. Built for learning.</div>
+    </div>
+  </footer>
+
+  <!-- STRUCTURED DATA: Website -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "NextGen DevHub",
+    "url": "https://nextgendevhub.com",
+    "description": "Developer-focused blog covering React, JavaScript, SEO, and modern web development.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://nextgendevhub.com/blogs?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- STRUCTURED DATA: Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "NextGen DevHub Blog",
+    "url": "https://nextgendevhub.com/blogs",
+    "description": "Articles on React, JavaScript, SEO, and web performance.",
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "The Complete React SEO Guide for 2024",
+        "datePublished": "2025-05-12",
+        "author": { "@type": "Person", "name": "NextGen DevHub" }
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "10 JavaScript Performance Tips You're Missing",
+        "datePublished": "2025-04-28",
+        "author": { "@type": "Person", "name": "NextGen DevHub" }
+      }
+    ]
+  }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
